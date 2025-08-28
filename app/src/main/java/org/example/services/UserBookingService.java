@@ -46,7 +46,7 @@ public class UserBookingService {
                 return Optional.empty();
             }
 
-            User newUser = new User(name, password, UserServiceUtil.hashPassword(password), new ArrayList<>(), UUID.randomUUID().toString());
+            User newUser = new User(name, UserServiceUtil.hashPassword(password), new ArrayList<>(), UUID.randomUUID().toString());
             userList.add(newUser);
             saveUserListToFile();
             return Optional.of(newUser);
@@ -91,7 +91,7 @@ public class UserBookingService {
                ticket.setSource(train.getStations().getFirst());
                ticket.setDestination(train.getStations().getLast());
                ticket.setTrain(train);
-               ticket.setUserId(user.getUserId());
+               ticket.setUserName(user.getName());
                ticket.setDateOfTravel("2025-09-01");
                ticket.setTicketId(UUID.randomUUID().toString().substring(0, 8));
                user.getTicketsBooked().add(ticket);

@@ -94,8 +94,8 @@ public class App {
                             }
                             System.out.println("--------------------------");
                         }
-                        break;
                     }
+                    break;
                 case 5:
                     if(currentUser==null) {
                         System.out.println("Login or Signup to continue");
@@ -128,9 +128,9 @@ public class App {
 
                     Boolean booked = userBookingService.bookTrainSeats(currentUser,trainToBook,row,col);
                     if (booked.equals(Boolean.TRUE)) {
-                        System.out.println("✅ Booked! Enjoy your journey");
+                        System.out.println(" Booked! Enjoy your journey");
                     } else {
-                        System.out.println("❌ Can't book this seat, try another one");
+                        System.out.println(" Can't book this seat, try another one");
                     }
                     break;
                 case 6:
